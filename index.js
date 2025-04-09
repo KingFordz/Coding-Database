@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 
 
 async function main(){
-const uri = "mongodb://localhost:27017"
+const uri = "mongodb://localhost:27018"
 const client = new MongoClient(uri);
 
 try {
@@ -12,10 +12,10 @@ console.log("Connected to MongoDB!");
 const db = client.db("testDB");
 const collection = db.collection("users");
 
-await collection.insertOne({ name: "Alice", age: 25});
+await collection.insertOne({ name: "Imran", age: 21});
 console. log("Document inserted!");
 
-const result = await collection.findOne({ name: "Alice"});
+const result = await collection.findOne({ name: "Imran"});
 console.log("Query result:", result);
 } catch (err) {
 console.error("Error:", err);
