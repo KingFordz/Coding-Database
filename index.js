@@ -12,10 +12,10 @@ console.log("Connected to MongoDB!");
 const db = client.db("testDB");
 const collection = db.collection("users");
 
-await collection.insertOne({ name: "Imran", age: 21});
+await collection.insertOne({ name: "Alice", age: 25});
 console. log("Document inserted!");
 
-const result = await collection.findOne({ name: "Imran"});
+const result = await collection.findOne({ name: "Alice"});
 console.log("Query result:", result);
 } catch (err) {
 console.error("Error:", err);
@@ -24,3 +24,4 @@ await client.close();
 }
 }
 main(); 
+//gay
